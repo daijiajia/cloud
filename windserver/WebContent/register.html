@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>please register</title>
+<style>
+div{
+    background:#009FCC;
+    font-size:24px;
+    padding:5px;
+    color:white;
+}
+form{
+    background: #F8F8FF ;
+    border:#357FC4 solid 1px;
+    color:#575454;  
+    width:400px;
+    margin:20px auto;
+    font-size:15px;
+}
+table{
+    margin:10px auto;
+}
+input[type="submit"]{
+    background:#228B22;
+    color:white;
+    font-size:15px;
+    font-weight:bold;
+    width:120px;
+    height:40px;
+}
+h{
+    text-align:right;
+    padding:0 5px;
+}
+input{
+    text-align:center;
+    font-size:12px;
+}
+input[type="text"]:read-only{
+    border:#888484 solid 2px;
+    background:#888484;
+    font-weight:bold;   
+}
+input[type="text"]:hover{
+    background:#EFD9AC;
+}
+video{
+	margin-left: 100px;
+}
+</style>
+</head>
+<body>
+<form id="form1" style="text-align:center" action="/windserver/register" method="post" onSubmit="return on_register()">
+<div>regist</div>
+<table>
+<h>username:</h><input type="text" name="username"/></br>
+<h>password:</h><input type="password" name="password"/></br>
+<h>email:</h><input type="text" name="email"/></br>
+<input type="submit" name="register" value="register"/>
+</table>
+</form>
+<script language="javascript">
+	function on_register(){
+		var form = document.getElementById('form1');
+		if(form.elements[0].value==""){
+			alert("username empty");
+			return false;
+		}
+		if(form.elements[1].value==""){
+			alert("password empty");
+			return false;
+		}
+		if(form.elements[2].value==""){
+			alert("email empty");
+			return false;
+		}
+	}
+</script>
+</body>
+</html>
